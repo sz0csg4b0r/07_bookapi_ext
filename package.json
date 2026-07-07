@@ -1,0 +1,23 @@
+{
+  "name": "04_first_server",
+  "version": "1.0.0",
+  "description": "cubix elso server projekt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "server",
+    "cubix",
+    "express",
+    "server"
+  ],
+  "author": "SZG",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^2.3.0",
+    "express": "^5.2.1",
+    "nodemon": "^3.1.14"
+  }
+}
