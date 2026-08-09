@@ -1,0 +1,39 @@
+<%- include('header')%>
+<table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Author</th>
+      <th>Operation</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <% books.forEach ( item => { %>
+    <tr>
+      <td><%= item.title %></td>
+      <td><%= item.author %></td>
+      <td>
+        <a href="/editbook/<%= item.id %>" class="btn btn-primary btn-sm m-1">Edit</a>
+        <a href="/deletebook/<%= item.id %>" class="btn btn-danger btn-sm m-1">Delete</a>
+      </td>
+    </tr>
+    <% }) %>
+
+
+
+    < </tbody>
+</table>
+<form action="/" method="GET">
+<div class="d-flex gap-2">
+  <div class="form-floating flex-fill m-3">
+    <input type="text" class="form-control" id="s" name="s" placeholder=" " />
+    <label for="s">Search</label>
+  </div >
+    <button type="submit" class="btn btn-primary align-self-center">Search</button>
+  
+</div>
+</form>
+
+<a class="btn btn-primary flex-fill" href="/newbook">New Book</a>
+<%- include('footer')%>

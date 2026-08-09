@@ -16,3 +16,30 @@ Resource:
 - POST /search      - könyvek keresése
     - search: bármilyen szöveg
 
+
+---
+Routing: 
+GET     /                   lista oldal
+GET     /newbook            üres hozzáadás form
+POST    /newbook            mentés (új hozzáadás)
+GET     /editbook/:id       módosítás form (előre kitöltjük)
+POST    /editbook/:id       mentés (módosítás)
+GET     /deletebook/:id     törlés
+
+- lista oldal (kezdő)
+    - keresésmező
+    - táblázat
+        - utolsó oszlop : módosítás és törlés
+    - button: new book
+- hozzáadás
+    - form 
+        - title, author
+    - button: mégsem -> lista oldalra
+- módosítás
+    - form
+        -title, author
+    - button: mégsem -> lista oldalra
+- törlés (nincs screen)
+    - törlés után -> lista oldalra
+
+
